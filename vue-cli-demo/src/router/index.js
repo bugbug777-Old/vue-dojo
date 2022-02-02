@@ -27,6 +27,19 @@ const routes = [
       {
         path: 'b',
         component: () => import('../views/InnerB.vue')
+      },
+      {
+        path: 'namedview',
+        component: () => import('../views/NamedView.vue'),
+        children: [
+          {
+            path: 'a2b',
+            components: {
+              left: () => import('../views/InnerA.vue'),
+              right: () => import('../views/InnerB.vue')
+            }
+          }
+        ]
       }
     ]
   }

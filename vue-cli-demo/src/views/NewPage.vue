@@ -3,22 +3,26 @@
     <div class="col-4">
       <div class="list-group">
         <router-link
-        to="/newpage/a"
-          href="#"
+          to="/newpage/a"
           class="list-group-item list-group-item-action"
-          aria-current="true"
         >
           Link to a
         </router-link>
       </div>
       <div class="list-group">
         <router-link
-        to="/newpage/b"
-          href="#"
+          to="/newpage/b"
           class="list-group-item list-group-item-action"
-          aria-current="true"
         >
           Link to b
+        </router-link>
+      </div>
+      <div class="list-group">
+        <router-link
+          to="/newpage/namedview/a2b"
+          class="list-group-item list-group-item-action"
+        >
+          Link to NamedView a2b
         </router-link>
       </div>
     </div>
