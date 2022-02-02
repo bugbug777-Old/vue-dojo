@@ -18,7 +18,34 @@ const routes = [
   {
     path: '/newpage',
     name: '新增頁面',
-    component: () => import('../views/NewPage.vue')
+    component: () => import('../views/NewPage.vue'),
+    children: [
+      {
+        path: 'a',
+        component: () => import('../views/InnerA.vue')
+      },
+      {
+        path: 'b',
+        component: () => import('../views/InnerB.vue')
+      },
+      {
+        path: 'dynamicRoute/:id',
+        component: () => import('../views/DynamicRoute.vue')
+      },
+      {
+        path: 'namedview',
+        component: () => import('../views/NamedView.vue'),
+        children: [
+          {
+            path: 'a2b',
+            components: {
+              left: () => import('../views/InnerA.vue'),
+              right: () => import('../views/InnerB.vue')
+            }
+          }
+        ]
+      }
+    ]
   }
 ]
 
