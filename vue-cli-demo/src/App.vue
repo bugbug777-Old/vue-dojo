@@ -1,9 +1,15 @@
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About</router-link> |
+    <router-link
+      :to="{
+        name: '新增頁面'
+      }"
+      >New Page</router-link
+    >
   </div>
-  <router-view/>
+  <router-view />
 </template>
 
 <style lang="scss">
